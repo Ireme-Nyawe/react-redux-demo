@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import CakeContainer from './components/CakeContainer'
+import { useState } from "react";
+import "./App.css";
+import CakeContainer from "./components/CakeContainer";
+import { Provider } from "react-redux";
+import Store from "./redux/Store";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <CakeContainer/>
-  )
+    <Provider store={Store}>
+      <CakeContainer />
+    </Provider>
+  );
 }
 
-export default App
+export default App;
