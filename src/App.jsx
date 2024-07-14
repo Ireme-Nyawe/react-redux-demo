@@ -7,7 +7,7 @@ import { HooksCakeContainer } from "./components/HooksCakeContainer";
 function App() {
   return (
     <Provider store={Store}>
-   <HooksCakeContainer></HooksCakeContainer>
+   <HooksCakeContainer/>
       <CakeContainer />
     </Provider>
   );
