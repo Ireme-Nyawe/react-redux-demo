@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import BuyIce from "../redux/ice/IceAction"
+import { BuyIce } from "../redux";
 export function IceContainer() {
   const numOfCakes = useSelector((state) => state.ice.numOfIces);
   const dispatch = useDispatch();
