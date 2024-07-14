@@ -1,2 +1,3 @@
-export { BuyCake } from "./cake/CakeActions";
-export { BuyIce } from "./ice/IceAction";
+import { BuyCake } from "./cake/CakeActions";
+
+export default BuyCake;
