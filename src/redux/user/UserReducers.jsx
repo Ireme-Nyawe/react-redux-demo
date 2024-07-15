@@ -7,8 +7,7 @@ const initialState = {
   users: [],
   error: "",
 };
-const UserReducer = (state = initialState, action) => {
-  console.log(action.type);
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_USERS_REQUEST:
       return {
@@ -27,7 +26,9 @@ const UserReducer = (state = initialState, action) => {
         users: [],
         error: action.payload,
       };
+    default:
+      return state;
   }
 };
 
-export default UserReducer;
+export default reducer;
