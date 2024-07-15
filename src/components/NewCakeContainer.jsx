@@ -13,7 +13,7 @@ function NewCakeContainer() {
         value={number}
         onChange={(e) => setNumber(e.target.value)}
       />
-      <button onClick={() => dispatch(BuyCake())}>buy {number} cake</button>
+      <button onClick={() => dispatch(BuyCake(number))}>buy {number} cake</button>
     </div>
   );
 }
