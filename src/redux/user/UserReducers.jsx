@@ -1,13 +1,13 @@
-import { FETCH_USERS_FAILURE } from "./UserTypes"
-import { FETCH_USERS_REQUEST } from "./UserTypes"
-import { FETCH_USERS_SUCCESS } from "./UserTypes"
+import { FETCH_USERS_FAILURE } from "./UserTypes";
+import { FETCH_USERS_REQUEST } from "./UserTypes";
+import { FETCH_USERS_SUCCESS } from "./UserTypes";
 
 const initialState = {
   loading: false,
   users: [],
   error: "",
 };
-const reducer = (state = initialState, action) => {
+const UserReducer = (state = initialState, action) => {
   console.log(action.type);
   switch (action.type) {
     case FETCH_USERS_REQUEST:
@@ -30,4 +30,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default UserReducer;
