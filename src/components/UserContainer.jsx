@@ -10,16 +10,12 @@ function UserContainer() {
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);
-  return (
-    <div>
-      users
-      <hr />
-      <p>
-        {users.users.map((user) => (
-          <h2>{user.name}</h2>
-        ))}
-      </p>
-    </div>
+  return users.loading ? (
+    <h2>Loading...</h2>
+  ) : users.error ? (
+    <h2>{users.error}</h2>
+  ) : (
+    users && users.users.map((user) => <h2 key={user.id}>{user.name}</h2>)
   );
 }
 export default UserContainer;
