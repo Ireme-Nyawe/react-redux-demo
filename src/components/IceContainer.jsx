@@ -6,7 +6,7 @@ export function IceContainer() {
   return (
     <div>
       <h2>Number of Ices {numOfCakes}</h2>
-      <button onClick={() => dispatch(BuyIce())}>buy a cake</button>
+      <button onClick={() => dispatch(BuyIce())}>Buy Ice</button>
     </div>
   );
 }
